@@ -1,0 +1,31 @@
+<section>
+    <small>RECENT</small>
+    <ul>
+        <li *ngFor="let project of projects.projects">
+            <button mat-button (click)="setProjectId(project._id)" [class.selected]="project._id==currentProjectId">{{ project.name }}</button>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <small>RECOMMENDED</small> 
+    <ul>
+        <li>
+            Dummy Item 1
+        </li>
+        <li>
+           Dummy Item 2
+        </li>
+    </ul>
+</section>
+<section>
+    <h3 mat-menu-item>
+        View All Projects
+    </h3>
+    <a href="/createproject">
+        <h3 mat-menu-item>
+            Create Project
+        </h3>
+    </a>
+</section>
+    

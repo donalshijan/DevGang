@@ -1,0 +1,16 @@
+mat-form-field {
+    margin-top: 50px;
+    padding: 10px;
+    width: 30%;   
+  }
+  
+  button {
+    margin-top: 20px; 
+  }
+  
+  .formContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }

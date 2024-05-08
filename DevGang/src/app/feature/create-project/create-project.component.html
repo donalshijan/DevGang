@@ -1,0 +1,18 @@
+<div >
+<form class="formContainer" [formGroup]="projectForm" (ngSubmit)="onCreate()">
+    <mat-form-field appearance="fill" >
+      <mat-label>Project Name</mat-label>
+      <input matInput formControlName="projectName" >
+      <mat-error *ngIf="projectForm.get('projectName')?.errors?.['required']">
+        Project name is required.
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill" >
+        <mat-label>Description</mat-label>
+        <input matInput formControlName="description" >
+      </mat-form-field>
+  
+    <button mat-raised-button cdkFocusInitial color="primary" type="submit">Create Project</button>
+  </form>
+</div>
+  

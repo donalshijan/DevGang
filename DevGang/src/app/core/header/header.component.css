@@ -1,0 +1,14 @@
+/* Add your CSS styling here */
+.navbar {
+    height: 3%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #c2185b;
+    color:#e7e7e7;
+  }
+  
+  .nav-item {
+    margin: 0 1rem;
+  }
+  

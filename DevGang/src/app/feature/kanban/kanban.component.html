@@ -1,0 +1,24 @@
+<h1>Kanban</h1>
+<div *ngIf="projects.projects.length > 0; else noProjects">
+  <h2>Project Name: {{ currentProject?.name }}</h2>
+  <p>Description: {{ currentProject?.description }}</p>
+</div>
+<ng-template #noProjects>
+  <p>No projects found.</p>
+</ng-template>
+
+<div class="kanban-board">
+  <div class="kanban-column" *ngFor="let status of ['To Do', 'In Progress', 'Done']"
+       cdkDropList [cdkDropListData]="getIssuesByStatus(status)" [cdkDropListConnectedTo]="['To Do', 'In Progress', 'Done']"
+       (cdkDropListDropped)="drop($event, status)" id="{{status}}" >
+    <h2>{{ status }}</h2>
+    <div *ngIf="getIssuesByStatus(status)?.length === 0" class="empty-column">
+        Drop items here
+      </div>
+    <div class="kanban-card" *ngFor="let issue of getIssuesByStatus(status)" [attr.data-id]="issue._id" cdkDrag>
+      <h3>{{ issue.summary }}</h3>
+      <p>{{ issue.description }}</p>
+      <span>Assigned to: {{ issue.assignee || 'None' }}</span>
+    </div>
+  </div>
+</div>

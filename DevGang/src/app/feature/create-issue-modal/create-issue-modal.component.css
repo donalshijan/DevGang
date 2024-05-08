@@ -1,0 +1,34 @@
+.dialog-content {
+    overflow-y: auto;
+    padding: 20px;
+  }
+  
+  .full-width-field {
+    margin-top: 8px;
+    width: 100%; /* Ensures other fields take full width */
+  }
+  
+  .wide-field {
+    width: 100%; /* Sets width to 150% relative to its normal size */
+
+  }
+  
+  .resize-textarea {
+    resize: both; /* Allows resizing both vertically and horizontally */
+  }
+  
+  .mat-dialog-actions {
+    padding: 12px 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .cancel-button {
+    color: #f44336;
+  }
+  
+  /* .create-button {
+    background-color: #4CAF50;
+    color: white;
+  } */
+  

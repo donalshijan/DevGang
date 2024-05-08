@@ -1,0 +1,13 @@
+<!-- timeline.component.html -->
+<div class="timeline-container">
+    <div class="timeline-axis">
+        <!-- Each task on the timeline -->
+        <div *ngFor="let task of tasks" 
+             [style.left]="calculatePosition(task.startDate)" 
+             [style.width]="calculateDuration(task.startDate, task.endDate)"
+             [ngClass]="{'open': task.status === 'Open', 'in-progress': task.status === 'InProgress', 'completed': task.status === 'Completed'}"
+             class="timeline-task">
+            {{ task.title }}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+ul {
+    list-style: none; 
+    padding: 2px; 
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #e0e0e0;
+    margin-left: 15px;
+}
+section {
+    margin-left: 10px;
+    color: white;
+    padding-top: 5px;
+}
+small
+{
+    font-weight: bold;
+    font-size: 11px;
+}
+
+[mat-button]{
+ cursor: pointer;
+}
+
+.selected{
+    background-color: #858383;
+}
+

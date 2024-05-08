@@ -1,0 +1,22 @@
+.main-layout{
+    width: 100%;
+    height: 100%;
+}
+.content {
+    height: 87%;
+    display: grid;
+    grid-template-columns: 1fr 0fr 5fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 0px;
+    }
+    
+    .div1 { grid-area: 1 / 1 / 2 / 2; }
+    .div2 { grid-area: 1 / 3 / 2 / 4; }
+    .div3 { grid-area: 1 / 4 / 2 / 5; }
+
+div{
+    height: 87%;
+}
+
+  

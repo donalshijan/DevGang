@@ -1,0 +1,16 @@
+.not-found {
+    text-align: center;
+    margin: 2rem auto;
+    padding: 2rem;
+  }
+  .not-found h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .not-found p {
+    margin-bottom: 1.5rem;
+  }
+  .not-found a {
+    text-decoration: none;
+    color: #007bff;
+  }

@@ -1,0 +1,56 @@
+<mat-toolbar color="primary" class="toolbar">
+    <mat-toolbar-row class="toolbarRow">
+    <div class="menuSection">
+      <button mat-button [matMenuTriggerFor]="yourWorkDropdown" class="menu-button">Your Work<fa-icon class="chevronIcon" [icon]="chevronDown"></fa-icon> </button>
+      <mat-menu #yourWorkDropdown="matMenu"> 
+        <app-your-work (click)="$event.stopPropagation()"></app-your-work>
+        <!-- <button mat-menu-item *ngFor="let item of workMenu" [routerLink]="item.link">{{ item.name }}</button> -->
+      </mat-menu>
+  
+      <!-- Projects Menu -->
+      <button mat-button [matMenuTriggerFor]="projectMenuDropdown" class="menu-button">Projects<fa-icon class="chevronIcon" [icon]="chevronDown"></fa-icon></button>
+      <mat-menu #projectMenuDropdown="matMenu">
+        <app-projects (click)="$event.stopPropagation()"></app-projects>
+      </mat-menu>
+  
+      <!-- Filters Menu -->
+      <button mat-button [matMenuTriggerFor]="filterMenuDropdown" class="menu-button">Filters<fa-icon class="chevronIcon" [icon]="chevronDown"></fa-icon></button>
+      <mat-menu #filterMenuDropdown="matMenu">
+        <button mat-menu-item *ngFor="let item of filterMenu" [routerLink]="item.link">{{ item.name }}</button>
+      </mat-menu>
+  
+      <!-- Teams Menu -->
+      <button mat-button [matMenuTriggerFor]="teamMenuDropdown" class="menu-button">Teams<fa-icon class="chevronIcon" [icon]="chevronDown"></fa-icon></button>
+      <mat-menu #teamMenuDropdown="matMenu">
+        <button mat-menu-item *ngFor="let item of teamMenu" [routerLink]="item.link">{{ item.name }}</button>
+      </mat-menu>
+  
+      <!-- Apps Menu -->
+      <button mat-button [matMenuTriggerFor]="appMenuDropdown" class="menu-button">Apps<fa-icon class="chevronIcon" [icon]="chevronDown"></fa-icon></button>
+      <mat-menu #appMenuDropdown="matMenu">
+        <button mat-menu-item *ngFor="let item of appMenu" [routerLink]="item.link">{{ item.name }}</button>
+      </mat-menu>
+  
+      <!-- Create Button -->
+      <button mat-raised-button  (click)="openDialog()" class="nav-create-button">Create</button>
+    </div>
+    <div class="menuIconSection">
+        <!-- Search Bar -->
+      <input type="search" placeholder="Search..." class="search-input">
+  
+      <!-- Notifications Icon -->
+      <button mat-icon-button class="menu-icon-button"><mat-icon>notifications</mat-icon></button>
+  
+      <!-- Settings Icon -->
+      <button mat-icon-button class="menu-icon-button"><mat-icon>settings</mat-icon></button>
+  
+      <!-- Profile Pic Element -->
+      <button mat-button [matMenuTriggerFor]="userMenuDropdown" class="menu-icon-button">Profile</button>
+      <mat-menu #userMenuDropdown="matMenu">
+        <button mat-menu-item *ngFor="let item of userMenu" (click)="item.action()">{{ item.name }}</button>
+      </mat-menu>
+    </div>
+      
+    </mat-toolbar-row>
+  </mat-toolbar>
+  

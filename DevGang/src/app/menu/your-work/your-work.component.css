@@ -1,0 +1,58 @@
+
+.yourWorkSubMenuNav {
+    padding-left: 15px;
+    padding-right: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
+
+
+.yourWorkSubMenuList {
+    list-style: none; 
+    padding: 2px; 
+    margin: 0; 
+    display: flex; 
+    justify-content: center; 
+    gap: 8px;
+    color: #e0e0e0;
+    height: 40px;
+}
+
+.yourWorkSubMenuList::before {
+    content: ''; /* Required for the pseudo-element to show */
+    display: block; /* Ensures it takes up the full width */
+    height: 2px; /* Height of the line */
+    background-color: #d0d0d0; /* Light grey color for the line */
+    width: 100%; /* Full width of the list */
+}
+.yourWorkSubMenuListItem::after {
+    content: ''; /* Required for the pseudo-element to show */
+    display: block; /* Ensures it matches the width of the list item */
+    height: 2px; /* Height of the line */
+    background-color: #a0a0a0; /* Darker grey for the active state line */
+    width: 100%; /* Full width of the list item */
+    transform: scaleX(0); /* Initially, line is not visible */
+    transition: transform 0.3s ease-in-out; /* Animation for the line appearance */
+}
+.yourWorkSubMenuListItem:active::after, .yourWorkSubMenuListItem:hover::after,.yourWorkSubMenuListItem:focus::after{
+    transform: scaleX(1); /* Scales the line to be fully visible */
+}
+
+.yourWorkSubMenuListItem {
+    cursor: pointer;
+    padding: 2px; 
+    text-wrap:nowrap;
+    transition: background-color 0.3s ease-in-out; 
+}
+
+.hasBeenClicked::after{
+    transform: scaleX(1);
+}
+
+
+
+
+.appYourWorkSubmenuContainer {
+    padding: 15px; 
+    margin-top: 5px; 
+    border-top: 1px solid #ccc; 
+}

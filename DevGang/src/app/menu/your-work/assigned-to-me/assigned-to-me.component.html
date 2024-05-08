@@ -1,0 +1,19 @@
+<section>
+    <small>TO DO</small> 
+    <ul class="toDoList">
+        <!-- Use *ngFor to list issues with status 'To Do' -->
+        <li class="toDoListItem" *ngFor="let issue of getToDoIssues()">
+            {{ issue.summary }} <!-- Assuming 'summary' is a property of each issue -->
+        </li>
+    </ul>
+    <small>IN PROGRESS</small> 
+    <ul class="toDoList">
+        <!-- Use *ngFor to list issues with status 'In Progress' -->
+        <li class="toDoListItem" *ngFor="let issue of getInProgressIssues()">
+            {{ issue.summary }} <!-- Similarly, assuming 'summary' is a property -->
+        </li>
+    </ul>
+</section>
+<section>
+    <h3 mat-menu-item>Go To Your Work Page</h3>
+</section>

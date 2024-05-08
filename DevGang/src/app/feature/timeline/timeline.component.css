@@ -1,0 +1,40 @@
+/* timeline.component.css */
+.timeline-container {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-top: 2px solid #333;
+    margin-top: 20px;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+.timeline-axis {
+    position: absolute;
+    width: 2000px; /* Large width to accommodate timeline length */
+    height: 100%;
+}
+
+.timeline-task {
+    position: absolute;
+    height: 100%;
+    background-color: #ccc;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    padding: 0 10px;
+}
+
+.timeline-task.open {
+    background-color: blue;
+}
+
+.timeline-task.in-progress {
+    background-color: orange;
+}
+
+.timeline-task.completed {
+    background-color: green;
+}

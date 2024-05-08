@@ -1,0 +1,8 @@
+<nav class="yourWorkSubMenuNav">
+    <ul class="yourWorkSubMenuList">
+        <li  class="yourWorkSubMenuListItem" (click)="loadComponent('assigned')" [class.hasBeenClicked]="currentType === 'assigned'">Assigned To Me</li>
+        <li class="yourWorkSubMenuListItem" (click)="loadComponent('recent')" [class.hasBeenClicked]="currentType === 'recent'">Recent</li>
+        <li class="yourWorkSubMenuListItem" (click)="loadComponent('boards')" [class.hasBeenClicked]="currentType === 'boards'">Boards</li>
+    </ul>
+</nav>
+    <ng-template appYourWorkSubmenuDynamicHost class="appYourWorkSubmenuContainer"></ng-template>

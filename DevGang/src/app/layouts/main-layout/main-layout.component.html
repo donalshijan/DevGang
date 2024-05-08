@@ -1,0 +1,11 @@
+<div class="main-layout">
+    <app-loading-spinner></app-loading-spinner>
+    <!-- <p>DevGang</p> -->
+    <app-header *ngIf="!isLoggedIn"> </app-header>
+    <app-navigation *ngIf="isLoggedIn"></app-navigation>
+    <div [class.content]="isLoggedIn">
+        <app-collapsable-left-sidebar *ngIf="isLoggedIn" class="leftSidebar"></app-collapsable-left-sidebar>
+        <router-outlet />
+    </div>
+    <app-footer></app-footer> 
+  </div>

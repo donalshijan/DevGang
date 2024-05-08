@@ -1,0 +1,16 @@
+.toolbar{
+    top: 0px;
+    width: 100%;
+    height: 5%;
+}
+.toolbarRow{
+    width: 100%;
+    justify-content: space-between;
+}
+.menuIconSection{
+    display: flex;
+    align-items: center;
+}
+.menuSection .menu-button .chevronIcon{
+    padding:5px;
+}

@@ -1,0 +1,49 @@
+<div class="issues-page-container">
+    <div class="top-bar">
+      <!-- Filter Form -->
+      <!-- Type Dropdown -->
+<div dropdown class="dropdown">
+    <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle" (click)="toggleDropdown('type', $event)">
+      Type<fa-icon class="chevronIcon" [icon]="chevronDown"></fa-icon> <span class="caret"></span>
+    </button>
+    <ul *dropdownMenu class="dropdown-menu" role="menu" [class.selected]="isOpenType">
+      <li role="menuitem" *ngFor="let type of types; let i = index">
+        <input type="checkbox" [(ngModel)]="type.checked" (change)="onTypeChange(i)"> {{ type.name }}
+      </li>
+    </ul>
+  </div>
+  
+  <!-- Status Dropdown -->
+  <div dropdown class="dropdown">
+    <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle" (click)="toggleDropdown('status', $event)">
+      Status<fa-icon class="chevronIcon" [icon]="chevronDown"></fa-icon> <span class="caret"></span>
+    </button>
+    <ul *dropdownMenu class="dropdown-menu" role="menu" [class.selected]="isOpenStatus">
+      <li role="menuitem" *ngFor="let status of statuses; let i = index">
+        <input type="checkbox" [(ngModel)]="status.checked" (change)="onStatusChange(i)"> {{ status.name }}
+      </li>
+    </ul>
+  </div>
+    </div>
+  
+    <div class="left-sidebar">
+      <!-- List Issues -->
+      <div *ngFor="let issue of filterIssues()" (click)="selectIssue(issue)"  [class.selected]="selectedIssue === issue" class="issueItem">
+        <p>{{ issue.summary }}</p>
+      </div>
+    </div>
+  
+    <div class="middle-column">
+      <!-- Issue Details -->
+      <h2>Summary: {{ selectedIssue?.summary }}</h2>
+      <h3>Description:{{ selectedIssue?.description }}</h3>
+      <h3>Type: {{ selectedIssue?.issueType }}</h3>
+    </div>
+  
+    <div class="right-column">
+      <!-- Additional Details -->
+      <h3>Status: {{ selectedIssue?.status }}</h3>
+      <h3>Assignee: {{ selectedIssue?.assignee }}</h3>
+    </div>
+  </div>
+  
